@@ -1,0 +1,34 @@
+@if(Request::segment(2)=="ogrencibilgi")
+
+
+veritabanı tablosundaki alanlara ek yapmak istersen değiştirdikten sonra php artisan migrate:fresh --seed komutu tüm tablo alanlarını yeniliyor ancak içindeki verileri siliyor
+
+tablo oluşturmak için:php artisan make:migration tabloadı --create=tabloadı taboluyu veritabanına aktarmak için: php artisan migrate
+
+ekle sil guncelle index fonksiyonlarına sahip bir controller eklemek için php artisan make:controller dosyaadı --resource
+
+tablo oluşturduktan sonra tabloya kodla veri girmek istersek seeder oluşmamız gerekiyor php artisan make:seeder seederadı
+
+oluşturmuş olduğumuzu seedere veri girip tabloya aktarmak için:php artisan db:seed
+
+model oluşturmak için php artisan make:model Model\Dosyaadı
+middleware oluşturmak için php artisan make:middleware dosyaadı
+composer update --no-scripts projedeki gerekli dosyalaru güncellemek için
+composer install
+composer dump-autoload
+php artisan key:generate indirdiğimiz projeye key üretmek için
+
+
+191 hatası için
+AppServiceProvider içine
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+
+Php versiyonunu öğrenmek için
+Php -v
+
+ Route::get('panel','Back\Dashboard@index')->name('dashboard');

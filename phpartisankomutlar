@@ -1,0 +1,12 @@
+proje oluşturmak için: composer create-project laravel/laravel projeadi
+projemizi çalıştırmak için: php artisan serve
+tablo oluşturmak için : php artisan make:migration team --create=teams
+model oluşturmak için : php artisan make:model Team
+tabloyu veritabanına aktarmak için: php artisan migrate:fresh
+projeyi başka bir pc ye taşıyıp çalıştırmak için: php artisan key:generate
+form doğrulaması için kural oluşturulacaksa: php artisan make:reguest OrnekRequest
+
+Sahte veri oluşturmak için
+1. seeder oluşturma : php artisan make:seeder TeamSeeder
+2. factory oluşturma: php artisan make:factory TeamFactory
+3. sahte verileri aktarmak için: php artisan migrate:fresh --seed
